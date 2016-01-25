@@ -1,0 +1,16 @@
+{
+    "contents" : "# Andrew Fairless, June 2010\n# modified April 2015 for posting onto Github\n# This script constructs the scatterplots for Figure 5 of Fairless et al 2011\n# Fairless et al 2011, doi: 10.1002/ar.21318, PMID: 21905241, PMCID: PMC3176979\n\ndata = read.table(\"data.txt\", header = TRUE)     \nlabels = read.table(\"labels.txt\", header = FALSE, sep = \"\\t\")    # axes labels\t\n\npixeldimensions = 640\t\naxeslength = 202\n\n# Figure 5a:  rater 1 correctable analysis vs. benchmark analysis\npng(file = \"figure5a.png\", width = pixeldimensions, height = pixeldimensions)\t\nplot(data$r1halftime~data$r1goldrigor, ylim = c(0, axeslength), \n     xlim = c(0, axeslength), main = NULL, xlab = labels[1, 1], \n     ylab = labels[2, 1], pch = 17, cex = 1.5, cex.lab = 1.5)\nabline(a = 0, b = 1, lty = 2)      # dotted line denoting y = x\ndev.off()\t\n\n# Figure 5b:  rater 3 realtime analysis vs. benchmark analysis\npng(file = \"figure5b.png\", width = pixeldimensions, height = pixeldimensions)     \nplot(data$r3halftime~data$r1goldrigor, ylim = c(0, axeslength), \n     xlim = c(0, axeslength), main = NULL, xlab = labels[1, 1], \n     ylab = labels[3, 1], pch = 17, cex = 1.5, cex.lab = 1.5)\nabline(a = 0, b = 1, lty = 2)      # dotted line denoting y = x\ndev.off()\t\n\n# Figure 5c:  Topscan software, cylinder sniffing (radius + 4 mm) vs. benchmark analysis\npng(file = \"figure5c.png\", width = pixeldimensions, height = pixeldimensions)     \nplot(data$sniff4mm~data$r1goldrigor, ylim = c(0, axeslength), \n     xlim = c(0, axeslength), main = NULL, xlab = labels[1, 1], \n     ylab = labels[4, 1], pch = 17, cex = 1.5, cex.lab = 1.5)\nabline(a = 0, b = 1, lty = 2)      # dotted line denoting y = x\ndev.off()\t\n\n# Figure 5d:  Topscan software, cylinder proximity (within 30 mm)s vs. benchmark analysis\npng(file = \"figure5d.png\", width = pixeldimensions, height = pixeldimensions)     \nplot(data$xnear30mm~data$r1goldrigor, ylim = c(0, axeslength), \n     xlim = c(0, axeslength), main = NULL, xlab = labels[1, 1], \n     ylab = labels[5, 1], pch = 17, cex = 1.5, cex.lab = 1.5)\nabline(a = 0, b = 1, lty = 2)      # dotted line denoting y = x\ndev.off()\t\n\n# scatterplots to be subsequently combined into one figure with photo-editing software\n",
+    "created" : 1428173379514.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2117809909",
+    "id" : "151A5F59",
+    "lastKnownWriteTime" : 1428173175,
+    "path" : "/media/zh/My Passport/backup/2015 code share/Fairless et al 2011 Fig 5/to share/figure5.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

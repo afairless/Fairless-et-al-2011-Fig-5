@@ -1,0 +1,5 @@
+Benchmark analysis
+Rater 1 correctable analysis
+Rater 3 realtime analysis
+Topscan software, cylinder sniffing (radius + 4 mm)
+Topscan software, cylinder proximity (within 30 mm)
